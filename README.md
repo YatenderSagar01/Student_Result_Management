@@ -5,7 +5,7 @@
 ## Structure
 - `frontend/`  index.html, style.css, app.js
 - `backend/`   app.py (API), requirements.txt
-- `database/`  schema.sql (tables and sample data); srms.db is created on first run
+- `database/`  schema.sql (tables); srms.db is created on first run
 
 ## Run
 ```bash
@@ -15,7 +15,8 @@ python app.py
 ```
 Open http://127.0.0.1:5000
 
-Demo login: `admin` / `admin123`. Student lookup: `BCA2201`.
+Demo login: `admin` / `admin123`.
+The database starts empty. Add students and subjects from the staff dashboard, then enter marks.
 Set the `SECRET_KEY` environment variable before deploying.
 
 ## Grading
