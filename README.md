@@ -18,7 +18,7 @@ py -m venv .venv
 .\.venv\Scripts\python.exe app.py
 ```
 
-When Flask prints `Running on http://127.0.0.1:5000`, leave the terminal open and visit http://127.0.0.1:5000 in your browser.
+When Flask prints `Running on http://127.0.0.1:8000`, leave the terminal open and visit http://127.0.0.1:5000 in your browser.
 
 If the `py` command is unavailable, use `python` instead for the version check and virtual environment creation.
 
