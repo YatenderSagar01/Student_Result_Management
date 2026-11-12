@@ -7,13 +7,20 @@
 - `backend/`   app.py (API), requirements.txt
 - `database/`  schema.sql (tables); srms.db is created on first run
 
-## Run
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
+## Run on Windows (PowerShell)
+
+From the project root, run:
+
+```powershell
+cd .\backend
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe app.py
 ```
-Open http://127.0.0.1:5000
+
+When Flask prints `Running on http://127.0.0.1:5000`, leave the terminal open and visit http://127.0.0.1:5000 in your browser.
+
+If the `py` command is unavailable, use `python` instead for the version check and virtual environment creation.
 
 Demo login: `admin` / `admin123`.
 The database starts empty. Add students and subjects from the staff dashboard, then enter marks.
