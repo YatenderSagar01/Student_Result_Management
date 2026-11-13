@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Student Result Management System</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;700&family=Public+Sans:wght@400;600&display=swap">
+<title>Result Management</title>
 <link rel="stylesheet" href="style.css"></head>
 <body><div class="wrap">
-<header><div><h1>Student Result Management System</h1><p>BCA Final Year Project</p></div>
+<header><div><h1>Result Management</h1><p>Student results, simply.</p></div>
 <button class="ghost" id="logout" hidden>Log out</button></header>
 <section id="home"><div class="grid">
- <div class="card"><h2>Check your result</h2><label for="qroll">Roll number</label>
-  <input id="qroll" placeholder="e.g. BCA2201"><button id="qbtn">Show result</button><p class="msg" id="qmsg"></p></div>
+ <div class="card"><h2>Check result</h2><label for="qroll">Roll number</label>
+  <input id="qroll" placeholder="BCA2201"><button id="qbtn">View</button><p class="msg" id="qmsg"></p></div>
  <div class="card"><h2>Staff login</h2><label for="u">Username</label><input id="u" autocomplete="username">
   <label for="p">Password</label><input id="p" type="password" autocomplete="current-password">
-  <button id="lbtn">Log in</button><p class="msg" id="lmsg"></p><p class="empty">Demo login: admin / admin123</p></div>
+  <button id="lbtn">Log in</button><p class="msg" id="lmsg"></p><p class="empty">Demo: admin / admin123</p></div>
 </div></section>
 <section id="admin" hidden><nav id="tabs"></nav><div id="pane"></div></section>
 <div class="card" id="sheetcard" hidden><div class="sheet" id="sheet"></div>
- <button class="noprint" onclick="window.print()">Print marksheet</button>
+ <button class="noprint" onclick="window.print()">Print</button>
  <button class="ghost noprint" id="closesheet">Close</button></div>
 </div><script src="app.js"></script></body></html>

@@ -1,30 +1,28 @@
-# Student Result Management System (BCA Final Year Project)
+# Student Result Management System
 
-**Stack:** HTML/CSS/JavaScript (frontend) · Python Flask (backend REST API) · SQLite (database)
+**Stack:** HTML/CSS/JavaScript · Python Flask REST API · MySQL
 
-## Structure
-- `frontend/`  index.html, style.css, app.js
-- `backend/`   app.py (API), requirements.txt
-- `database/`  schema.sql (tables); srms.db is created on first run
+## Project structure
+- `frontend/` — static HTML, CSS, and JavaScript
+- `backend/` — Flask API and `requirements.txt`
+- `database/schema.sql` — MySQL database and table definitions
 
-## Run on Windows (PowerShell)
+## Run on Windows
 
-From the project root, run:
+Requirements: Python and MySQL Server 8.0.16 or newer.
+
+1. Start MySQL Server. In MySQL Workbench, connect to `localhost`, choose **File → Open SQL Script**, open `database/schema.sql`, then click the lightning bolt to execute it. This creates the `srms` database and tables. The schema starts without student or marks records.
+2. From PowerShell at the project root, install the Python dependencies and start the app:
 
 ```powershell
 cd .\backend
 py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+$env:DB_USER = "root"
+$env:DB_PASSWORD = "YOUR_MYSQL_ROOT_PASSWORD"
 .\.venv\Scripts\python.exe app.py
 ```
 
-When Flask prints `Running on http://127.0.0.1:8000`, leave the terminal open and visit http://127.0.0.1:5000 in your browser.
+Replace `YOUR_MYSQL_ROOT_PASSWORD` with your local MySQL password. When Flask prints `Running on http://127.0.0.1:5000`, open that address in your browser and leave the terminal running.
 
-If the `py` command is unavailable, use `python` instead for the version check and virtual environment creation.
-
-Demo login: `admin` / `admin123`.
-The database starts empty. Add students and subjects from the staff dashboard, then enter marks.
-Set the `SECRET_KEY` environment variable before deploying.
-
-## Grading
-Pass mark 40% per subject. Grades: O 90+, A+ 80+, A 70+, B 60+, C 50+, D 40+, F below 40.
+The app creates the demo staff login on first run: `admin` / `admin123`. Add students and subjects through the staff dashboard, then enter marks. Set a strong `SECRET_KEY` before deploying.
